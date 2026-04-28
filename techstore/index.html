@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore MD – Tehnologie premium pentru viața ta</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">TechStore MD</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Acasă</a></li>
+    <li><a href="produse.html">Produse</a></li>
+    <li><a href="oferte.html">Oferte</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-search">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Caută produse...">
+  </div>
+  <a href="cos.html" class="nav-cart">
+    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <span class="cart-badge" id="cartBadge">0</span>
+  </a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Nouă colecție 2026</div>
+    <h1>Tehnologie premium pentru viața ta</h1>
+    <p>Descoperă cele mai noi produse Apple, Samsung, Dell și multe altele. Garanție oficială și livrare rapidă în toată Moldova.</p>
+    <div class="hero-btns">
+      <a href="produse.html" class="btn-primary">Vezi produsele →</a>
+      <a href="oferte.html" class="btn-outline">Oferte speciale</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">500+</div>
+        <div class="hero-stat-label">Produse</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">10K+</div>
+        <div class="hero-stat-label">Clienți mulțumiți</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">24h</div>
+        <div class="hero-stat-label">Livrare rapidă</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80" alt="MacBook Pro" loading="eager"
+         onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>💻</div>'">
+    <div class="hero-badge-float">
+      <div class="hero-badge-icon">
+        <svg width="18" height="18" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div>
+        <strong>Produse originale</strong>
+        <span>Garanție oficială</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <h2>Categorii populare</h2>
+    <p>Explorează produsele după categorie</p>
+  </div>
+  <div class="categories-grid">
+    <a href="produse.html?cat=Laptopuri" class="category-card">
+      <div class="category-card-img">
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" alt="Laptopuri" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>💻</div>'">
+      </div>
+      <span>Laptopuri</span>
+    </a>
+    <a href="produse.html?cat=Telefoane" class="category-card">
+      <div class="category-card-img">
+        <img src="https://images.unsplash.com/photo-1592899677977-9c10002761d0?w=400&q=80" alt="Telefoane" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>📱</div>'">
+      </div>
+      <span>Telefoane</span>
+    </a>
+    <a href="produse.html?cat=Tablete" class="category-card">
+      <div class="category-card-img">
+        <img src="https://images.unsplash.com/photo-1589739900266-43b2843f4c12?w=400&q=80" alt="Tablete" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>📲</div>'">
+      </div>
+      <span>Tablete</span>
+    </a>
+    <a href="produse.html?cat=Accesorii" class="category-card">
+      <div class="category-card-img">
+        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&q=80" alt="Accesorii" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>🎧</div>'">
+      </div>
+      <span>Accesorii</span>
+    </a>
+    <a href="produse.html?cat=Monitoare" class="category-card">
+      <div class="category-card-img">
+        <img src="https://images.unsplash.com/photo-1547119957-637f8679db1e?w=400&q=80" alt="Monitoare" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>🖥️</div>'">
+      </div>
+      <span>Monitoare</span>
+    </a>
+    <a href="produse.html?cat=Wearables" class="category-card">
+      <div class="category-card-img">
+        <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=400&q=80" alt="Wearables" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>⌚</div>'">
+      </div>
+      <span>Wearables</span>
+    </a>
+  </div>
+</section>
+
+<div class="brands-section">
+  <div class="brands-label">Branduri de încredere</div>
+  <div class="brands-list">
+    <span>Apple</span>
+    <span>Samsung</span>
+    <span>Dell</span>
+    <span>HP</span>
+    <span>Lenovo</span>
+    <span>Asus</span>
+    <span>Sony</span>
+    <span>Logitech</span>
+  </div>
+</div>
+
+<section class="reviews-section">
+  <div class="section-header">
+    <h2>Ce spun clienții noștri</h2>
+    <p>Peste 10,000 de clienți mulțumiți în toată Moldova</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">Serviciu excelent! Am comandat un MacBook și a ajuns în 24h. Produsul este original și prețul foarte competitiv. Recomand cu încredere!</p>
+      <div class="review-meta">
+        <div class="review-author">
+          <strong>Ana Popescu</strong>
+          <span>Chișinău</span>
+        </div>
+        <span class="review-date">15 Aprilie 2026</span>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">Prima dată când comand de la TechStore și sunt foarte mulțumit. Echipa a fost foarte profesionistă și m-au ajutat să aleg telefonul potrivit.</p>
+      <div class="review-meta">
+        <div class="review-author">
+          <strong>Mihai Rusu</strong>
+          <span>Bălți</span>
+        </div>
+        <span class="review-date">10 Aprilie 2026</span>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">Cel mai bun magazin tech din Moldova! Prețuri corecte, livrare rapidă și suport excelent. Am cumpărat și pentru prieteni.</p>
+      <div class="review-meta">
+        <div class="review-author">
+          <strong>Elena Ciobanu</strong>
+          <span>Cahul</span>
+        </div>
+        <span class="review-date">5 Aprilie 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="stats-row">
+    <div><div class="stat-num">4.9/5</div><div class="stat-label">Rating mediu</div></div>
+    <div><div class="stat-num">10K+</div><div class="stat-label">Clienți fericiți</div></div>
+    <div><div class="stat-num">500+</div><div class="stat-label">Produse</div></div>
+    <div><div class="stat-num">99%</div><div class="stat-label">Recomandări</div></div>
+  </div>
+</section>
+
+<section style="padding: 64px 40px;">
+  <div style="max-width: 760px; margin: 0 auto;">
+    <div class="faq-header">
+      <div class="faq-icon">❓</div>
+      <h2 style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:8px;">Întrebări frecvente</h2>
+      <p style="color:var(--gray-600)">Răspunsuri la cele mai comune întrebări</p>
+    </div>
+    <div id="faqList">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Care sunt opțiunile de livrare?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a">Livrăm în toată Moldova în 24h prin curier rapid. Livrarea este gratuită pentru comenzi peste 3000 MDL. Poți ridica produsul și direct din showroom-ul nostru din Chișinău.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Ce metode de plată acceptați?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a">Acceptăm plata cu card bancar (Visa/Mastercard), numerar la livrare, transfer bancar și plata în rate prin Moldova Agroindbank și Victoriabank.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Produsele au garanție?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a">Da! Toate produsele noastre sunt originale și beneficiază de garanție oficială de la producător – 12 sau 24 de luni, în funcție de produs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Pot returna un produs?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a">Da, acceptăm returnări în 14 zile de la livrare, dacă produsul este în stare originală și ambalajul este intact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">TechStore MD</div>
+      <p class="footer-desc">Magazinul tău de încredere pentru tehnologie premium în Moldova. Garanție oficială, livrare rapidă, prețuri corecte.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigare</h4>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="produse.html">Produse</a></li>
+        <li><a href="oferte.html">Oferte</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categorii</h4>
+      <ul>
+        <li><a href="produse.html?cat=Laptopuri">Laptopuri</a></li>
+        <li><a href="produse.html?cat=Telefoane">Telefoane</a></li>
+        <li><a href="produse.html?cat=Tablete">Tablete</a></li>
+        <li><a href="produse.html?cat=Accesorii">Accesorii</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">📍 Chișinău, Moldova</a></li>
+        <li><a href="contact.html">📞 +373 XX XXX XXX</a></li>
+        <li><a href="contact.html">✉️ info@techstore.md</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TechStore MD. Toate drepturile rezervate.</span>
+    <span>Politica de confidențialitate · Termeni și condiții</span>
+  </div>
+</footer>
+
+<button class="chat-btn" title="Chat support">💬</button>
+<div class="toast" id="toast">✓ Produs adăugat în coș!</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
