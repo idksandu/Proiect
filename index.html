@@ -3,905 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechStore MD – Tehnologie premium pentru viața ta</title>
+<title>Contact – TechStore MD</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black: #111111;
-    --white: #ffffff;
-    --gray-50: #f8f8f8;
-    --gray-100: #f1f1f1;
-    --gray-200: #e5e5e5;
-    --gray-400: #a0a0a0;
-    --gray-600: #6b6b6b;
-    --green: #22c55e;
-    --green-dark: #16a34a;
-    --red: #ef4444;
-    --blue: #3b82f6;
-    --orange: #f97316;
-    --yellow: #f59e0b;
-    --radius: 14px;
-    --radius-sm: 8px;
-    --shadow: 0 2px 16px rgba(0,0,0,0.08);
-    --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
-  }
- 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
- 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    color: var(--black);
-    background: var(--white);
-    font-size: 15px;
-    line-height: 1.6;
-  }
- 
-  /* ─── NAVBAR ─── */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--white);
-    border-bottom: 1px solid var(--gray-200);
-    padding: 0 40px;
-    display: flex; align-items: center; gap: 40px;
-    height: 64px;
-  }
-  .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800; font-size: 1.3rem;
-    text-decoration: none; color: var(--black);
-    white-space: nowrap;
-  }
-  .nav-links {
-    display: flex; gap: 28px; list-style: none; flex: 1;
-  }
-  .nav-links a {
-    text-decoration: none; color: var(--black);
-    font-size: 0.95rem; font-weight: 500;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--gray-600); }
-  .nav-search {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--gray-100); border-radius: 10px;
-    padding: 8px 16px; flex: 0 0 280px;
-    border: 1px solid var(--gray-200);
-    transition: border-color 0.2s;
-  }
-  .nav-search:focus-within { border-color: var(--black); }
-  .nav-search input {
-    border: none; background: none; outline: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem; color: var(--black); width: 100%;
-  }
-  .nav-search input::placeholder { color: var(--gray-400); }
-  .nav-search svg { color: var(--gray-400); flex-shrink: 0; }
-  .nav-cart {
-    background: none; border: none; cursor: pointer;
-    position: relative; padding: 6px;
-  }
-  .nav-cart svg { width: 24px; height: 24px; }
-  .cart-badge {
-    position: absolute; top: 0; right: 0;
-    background: var(--black); color: var(--white);
-    font-size: 10px; font-weight: 700;
-    width: 18px; height: 18px;
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  }
- 
-  /* ─── HERO ─── */
-  .hero {
-    display: grid; grid-template-columns: 1fr 1fr;
-    min-height: 560px; padding: 60px 40px;
-    gap: 40px; align-items: center;
-    background: var(--gray-50);
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: ''; position: absolute;
-    inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(34,197,94,0.06) 0%, transparent 60%);
-  }
-  .hero-content { position: relative; z-index: 1; }
-  .hero-badge {
-    display: inline-block;
-    background: var(--white); border: 1px solid var(--gray-200);
-    border-radius: 100px; padding: 6px 16px;
-    font-size: 0.85rem; font-weight: 500;
-    margin-bottom: 24px;
-  }
-  .hero h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.4rem, 4vw, 3.2rem);
-    font-weight: 800; line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-  }
-  .hero p {
-    color: var(--gray-600); font-size: 1rem;
-    line-height: 1.7; margin-bottom: 32px;
-    max-width: 440px;
-  }
-  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
-  .btn-primary {
-    background: var(--black); color: var(--white);
-    border: none; border-radius: 10px;
-    padding: 13px 24px; font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem; font-weight: 600;
-    cursor: pointer; text-decoration: none;
-    display: inline-flex; align-items: center; gap: 8px;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { background: #333; transform: translateY(-1px); }
-  .btn-outline {
-    background: var(--white); color: var(--black);
-    border: 1.5px solid var(--gray-200); border-radius: 10px;
-    padding: 13px 24px; font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem; font-weight: 600;
-    cursor: pointer; text-decoration: none;
-    display: inline-flex; align-items: center;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .btn-outline:hover { border-color: var(--black); transform: translateY(-1px); }
-  .hero-stats { display: flex; gap: 40px; }
-  .hero-stat-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.6rem; font-weight: 800;
-  }
-  .hero-stat-label { font-size: 0.85rem; color: var(--gray-600); }
-  .hero-image {
-    position: relative; border-radius: 20px; overflow: hidden;
-    height: 440px;
-  }
-  .hero-image img {
-    width: 100%; height: 100%; object-fit: cover;
-  }
-  .hero-badge-float {
-    position: absolute; bottom: 20px; right: 20px;
-    background: var(--white); border-radius: 12px;
-    padding: 12px 16px; display: flex; align-items: center; gap: 12px;
-    box-shadow: var(--shadow-md);
-  }
-  .hero-badge-icon {
-    width: 36px; height: 36px; border-radius: 50%;
-    background: var(--green); display: flex; align-items: center; justify-content: center;
-    color: white;
-  }
-  .hero-badge-float strong { display: block; font-size: 0.9rem; font-weight: 700; }
-  .hero-badge-float span { font-size: 0.8rem; color: var(--gray-600); }
- 
-  /* ─── CATEGORIES ─── */
-  .section { padding: 64px 40px; }
-  .section-header { text-align: center; margin-bottom: 40px; }
-  .section-header h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.6rem; font-weight: 700; margin-bottom: 8px;
-  }
-  .section-header p { color: var(--gray-600); }
- 
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 16px;
-  }
-  .category-card {
-    border: 1.5px solid var(--gray-200); border-radius: var(--radius);
-    overflow: hidden; cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none; color: var(--black);
-    display: flex; flex-direction: column; align-items: center;
-    position: relative;
-  }
-  .category-card:hover { border-color: var(--black); transform: translateY(-2px); box-shadow: var(--shadow); }
-  .category-card-img {
-    width: 100%; height: 100px; overflow: hidden;
-    position: relative;
-  }
-  .category-card-img img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.3s;
-  }
-  .category-card:hover .category-card-img img { transform: scale(1.05); }
-  .category-card-img::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.4));
-  }
-  .category-card span {
-    font-size: 0.9rem; font-weight: 600;
-    padding: 10px 8px; text-align: center;
-  }
- 
-  /* product placeholder for broken images */
-  .img-placeholder {
-    width: 100%; height: 100%;
-    background: linear-gradient(135deg, #f1f1f1 0%, #e5e5e5 100%);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 2.5rem;
-  }
- 
-  /* ─── BRANDS ─── */
-  .brands-section {
-    background: var(--gray-50);
-    border-top: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-200);
-    padding: 32px 40px; text-align: center;
-  }
-  .brands-label {
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
-    color: var(--gray-400); text-transform: uppercase; margin-bottom: 20px;
-  }
-  .brands-list {
-    display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-    align-items: center;
-  }
-  .brands-list span {
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem; font-weight: 700;
-    color: var(--gray-400); cursor: pointer;
-    transition: color 0.2s;
-  }
-  .brands-list span:hover { color: var(--black); }
- 
-  /* ─── OFFERS ─── */
-  .offers-header {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
-  }
-  .offers-header h2 {
-    font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700;
-  }
-  .offers-sub { color: var(--gray-600); margin-bottom: 28px; }
-  .offers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .offer-card {
-    border: 1.5px solid var(--gray-200); border-radius: var(--radius);
-    overflow: hidden; cursor: pointer;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .offer-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-  .offer-img {
-    height: 200px; background: var(--gray-100);
-    position: relative; overflow: hidden;
-  }
-  .offer-img img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.4s;
-  }
-  .offer-card:hover .offer-img img { transform: scale(1.04); }
-  .offer-badge {
-    position: absolute; top: 12px; right: 12px;
-    border-radius: 100px; padding: 4px 12px;
-    font-size: 0.8rem; font-weight: 700; color: white;
-    z-index: 2;
-  }
-  .badge-red { background: var(--red); }
-  .badge-blue { background: var(--blue); }
-  .badge-green { background: var(--green); }
-  .offer-body { padding: 18px; }
-  .offer-body h3 { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
-  .offer-body p { color: var(--gray-600); font-size: 0.88rem; margin-bottom: 12px; }
-  .offer-footer {
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 0.85rem; color: var(--gray-600);
-  }
-  .offer-footer a {
-    color: var(--black); font-weight: 600; text-decoration: none;
-    transition: text-decoration 0.1s;
-  }
-  .offer-footer a:hover { text-decoration: underline; }
- 
-  /* ─── PRODUCTS ─── */
-  .products-section { padding: 64px 40px; }
-  .products-header { margin-bottom: 32px; }
-  .products-header h2 {
-    font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700;
-  }
-  .products-header p { color: var(--gray-600); }
-  .products-layout { display: grid; grid-template-columns: 220px 1fr; gap: 32px; }
- 
-  /* FILTERS */
-  .filters-panel {
-    border: 1.5px solid var(--gray-200); border-radius: var(--radius);
-    padding: 24px; height: fit-content;
-    position: sticky; top: 80px;
-  }
-  .filters-title {
-    display: flex; align-items: center; gap: 8px;
-    font-weight: 700; font-size: 0.95rem; margin-bottom: 20px;
-  }
-  .filters-group { margin-bottom: 24px; }
-  .filters-group-label {
-    font-size: 0.85rem; font-weight: 600; color: var(--gray-600);
-    margin-bottom: 12px;
-  }
-  .filter-option {
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 10px; cursor: pointer;
-    font-size: 0.9rem;
-  }
-  .filter-option input[type="radio"] {
-    accent-color: var(--black);
-    width: 16px; height: 16px; cursor: pointer;
-  }
-  .price-inputs { display: flex; gap: 8px; align-items: center; }
-  .price-input {
-    border: 1.5px solid var(--gray-200); border-radius: 8px;
-    padding: 8px 10px; font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem; width: 100%; outline: none;
-    transition: border-color 0.2s;
-  }
-  .price-input:focus { border-color: var(--black); }
-  .price-sep { color: var(--gray-400); font-size: 0.85rem; }
-  .reset-btn {
-    background: none; border: none; cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem; color: var(--gray-600);
-    margin-top: 12px; padding: 0; text-decoration: underline;
-  }
-  .reset-btn:hover { color: var(--black); }
- 
-  /* PRODUCT GRID */
-  .products-count { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 20px; }
-  .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .product-card {
-    border: 1.5px solid var(--gray-200); border-radius: var(--radius);
-    overflow: hidden; cursor: pointer;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-  .product-img {
-    height: 180px; position: relative; overflow: hidden;
-    background: var(--gray-100);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .product-img img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.4s;
-  }
-  .product-card:hover .product-img img { transform: scale(1.04); }
-  .out-of-stock-overlay {
-    position: absolute; inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex; align-items: center; justify-content: center;
-    z-index: 2;
-  }
-  .out-of-stock-overlay span {
-    background: var(--red); color: white;
-    padding: 6px 14px; border-radius: 100px;
-    font-size: 0.82rem; font-weight: 700;
-  }
-  .product-body { padding: 16px; }
-  .product-cat { font-size: 0.78rem; color: var(--gray-400); margin-bottom: 6px; text-transform: capitalize; }
-  .product-name { font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; line-height: 1.4; }
-  .product-rating {
-    display: flex; align-items: center; gap: 6px;
-    font-size: 0.83rem; color: var(--gray-600); margin-bottom: 12px;
-  }
-  .stars { color: var(--yellow); }
-  .product-footer {
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .product-price {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700; font-size: 1rem;
-  }
-  .btn-add {
-    background: var(--black); color: var(--white);
-    border: none; border-radius: 8px;
-    padding: 8px 16px; font-family: 'DM Sans', sans-serif;
-    font-size: 0.83rem; font-weight: 600;
-    cursor: pointer; display: flex; align-items: center; gap: 6px;
-    transition: background 0.2s;
-  }
-  .btn-add:hover { background: #333; }
-  .btn-add:disabled {
-    background: var(--gray-200); color: var(--gray-400); cursor: not-allowed;
-  }
- 
-  /* ─── REVIEWS ─── */
-  .reviews-section { padding: 64px 40px; background: var(--gray-50); }
-  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
-  .review-card {
-    background: var(--white); border-radius: var(--radius);
-    border: 1.5px solid var(--gray-200);
-    padding: 24px; position: relative;
-  }
-  .review-stars { color: var(--yellow); font-size: 1.1rem; margin-bottom: 12px; }
-  .review-quote {
-    position: absolute; top: 20px; right: 20px;
-    font-size: 2rem; color: var(--gray-200);
-    font-family: Georgia, serif;
-  }
-  .review-text { font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px; }
-  .review-meta { border-top: 1px solid var(--gray-100); padding-top: 16px; display: flex; justify-content: space-between; align-items: flex-end; }
-  .review-author strong { display: block; font-weight: 700; font-size: 0.9rem; }
-  .review-author span { font-size: 0.82rem; color: var(--gray-600); }
-  .review-date { font-size: 0.82rem; color: var(--gray-400); }
- 
-  .stats-row {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 20px; text-align: center;
-  }
-  .stat-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.4rem; font-weight: 800; margin-bottom: 4px;
-  }
-  .stat-label { color: var(--gray-600); font-size: 0.9rem; }
- 
-  /* ─── FAQ ─── */
-  .faq-section { padding: 64px 40px; max-width: 760px; margin: 0 auto; }
-  .faq-header { text-align: center; margin-bottom: 40px; }
-  .faq-icon {
-    width: 56px; height: 56px; border-radius: 50%;
-    border: 2px solid var(--gray-200);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem; margin: 0 auto 16px;
-  }
-  .faq-item {
-    border: 1.5px solid var(--gray-200); border-radius: var(--radius);
-    margin-bottom: 12px; overflow: hidden;
-    transition: border-color 0.2s;
-  }
-  .faq-item.open { border-color: var(--black); }
-  .faq-q {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 18px 20px; cursor: pointer;
-    font-weight: 600; font-size: 0.95rem;
-    background: var(--white);
-    user-select: none;
-  }
-  .faq-q svg { flex-shrink: 0; transition: transform 0.3s; }
-  .faq-item.open .faq-q svg { transform: rotate(180deg); }
-  .faq-a {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.2s;
-    padding: 0 20px;
-    font-size: 0.9rem; color: var(--gray-600); line-height: 1.7;
-    background: var(--white);
-  }
-  .faq-item.open .faq-a {
-    max-height: 200px; padding: 0 20px 18px;
-  }
- 
-  /* ─── FOOTER ─── */
-  footer {
-    background: var(--black); color: var(--white);
-    padding: 48px 40px 28px;
-  }
-  .footer-grid {
-    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px; margin-bottom: 40px;
-  }
-  .footer-logo {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.4rem; font-weight: 800; margin-bottom: 12px;
-  }
-  .footer-desc { color: #888; font-size: 0.9rem; line-height: 1.7; }
-  .footer-col h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; color: #aaa; letter-spacing: 0.05em; text-transform: uppercase; }
-  .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 10px; }
-  .footer-col a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-  .footer-col a:hover { color: var(--white); }
-  .footer-bottom {
-    border-top: 1px solid #2a2a2a; padding-top: 24px;
-    display: flex; justify-content: space-between; align-items: center;
-    color: #666; font-size: 0.85rem;
-  }
- 
-  /* ─── CHAT BUTTON ─── */
-  .chat-btn {
-    position: fixed; bottom: 24px; left: 24px; z-index: 200;
-    width: 48px; height: 48px; border-radius: 50%;
-    background: var(--green); color: white; border: none;
-    cursor: pointer; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 16px rgba(34,197,94,0.4);
-    transition: transform 0.2s;
-    font-size: 1.2rem;
-  }
-  .chat-btn:hover { transform: scale(1.1); }
- 
-  /* ─── TOAST ─── */
-  .toast {
-    position: fixed; bottom: 32px; right: 32px; z-index: 300;
-    background: var(--black); color: white;
-    padding: 14px 20px; border-radius: 12px;
-    font-size: 0.9rem; font-weight: 500;
-    opacity: 0; transform: translateY(16px);
-    transition: all 0.3s;
-    pointer-events: none;
-  }
-  .toast.show { opacity: 1; transform: translateY(0); }
- 
-  /* SVG product icons fallback */
-  .product-icon-wrap {
-    width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, #f8f8f8 0%, #ececec 100%);
-    font-size: 3.5rem;
-  }
- 
-  @media (max-width: 1024px) {
-    .categories-grid { grid-template-columns: repeat(3, 1fr); }
-    .products-grid { grid-template-columns: repeat(2, 1fr); }
-    .products-layout { grid-template-columns: 1fr; }
-    .filters-panel { position: static; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 768px) {
-    nav { padding: 0 20px; gap: 16px; }
-    .nav-search { display: none; }
-    .hero { grid-template-columns: 1fr; padding: 40px 20px; }
-    .hero-image { height: 260px; }
-    .section { padding: 48px 20px; }
-    .categories-grid { grid-template-columns: repeat(2, 1fr); }
-    .offers-grid, .reviews-grid { grid-template-columns: 1fr; }
-    .products-grid { grid-template-columns: 1fr; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .footer-grid { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- 
-<!-- NAVBAR -->
+
 <nav>
-  <a href="#" class="nav-logo">TechStore MD</a>
+  <a href="index.html" class="nav-logo">TechStore MD</a>
   <ul class="nav-links">
-    <li><a href="#">Acasă</a></li>
-    <li><a href="#">Produse</a></li>
-    <li><a href="#">Oferte</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="produse.html">Produse</a></li>
+    <li><a href="oferte.html">Oferte</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
   <div class="nav-search">
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     <input type="text" placeholder="Caută produse...">
   </div>
-  <button class="nav-cart" onclick="openCart()">
+  <a href="cos.html" class="nav-cart">
     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
     <span class="cart-badge" id="cartBadge">0</span>
-  </button>
+  </a>
 </nav>
- 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-badge">Nouă colecție 2026</div>
-    <h1>Tehnologie premium pentru viața ta</h1>
-    <p>Descoperă cele mai noi produse Apple, Samsung, Dell și multe altele. Garanție oficială și livrare rapidă în toată Moldova.</p>
-    <div class="hero-btns">
-      <a href="#products" class="btn-primary">Vezi produsele →</a>
-      <a href="#oferte" class="btn-outline">Oferte speciale</a>
-    </div>
-    <div class="hero-stats">
+
+<div class="page-hero">
+  <h1>Contactează-ne</h1>
+  <p>Suntem aici să te ajutăm. Scrie-ne sau vizitează showroom-ul nostru din Chișinău.</p>
+</div>
+
+<div class="contact-layout">
+  <div class="contact-info">
+    <h2>Informații de contact</h2>
+    <p>Echipa noastră este disponibilă de luni până sâmbătă, 9:00 – 19:00.</p>
+
+    <div class="contact-card">
+      <div class="contact-card-icon">📍</div>
       <div>
-        <div class="hero-stat-num">500+</div>
-        <div class="hero-stat-label">Produse</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">10K+</div>
-        <div class="hero-stat-label">Clienți mulțumiți</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">24h</div>
-        <div class="hero-stat-label">Livrare rapidă</div>
+        <div class="contact-card-title">Adresă</div>
+        <div class="contact-card-value">Bd. Ștefan cel Mare 1, Chișinău, Moldova</div>
       </div>
     </div>
-  </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80" alt="MacBook Pro" loading="eager"
-         onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>💻</div>'">
-    <div class="hero-badge-float">
-      <div class="hero-badge-icon">
-        <svg width="18" height="18" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
+    <div class="contact-card">
+      <div class="contact-card-icon">📞</div>
       <div>
-        <strong>Produse originale</strong>
-        <span>Garanție oficială</span>
+        <div class="contact-card-title">Telefon</div>
+        <div class="contact-card-value">+373 XX XXX XXX</div>
       </div>
     </div>
+    <div class="contact-card">
+      <div class="contact-card-icon">✉️</div>
+      <div>
+        <div class="contact-card-title">Email</div>
+        <div class="contact-card-value">info@techstore.md</div>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-card-icon">🕐</div>
+      <div>
+        <div class="contact-card-title">Program</div>
+        <div class="contact-card-value">Luni – Sâmbătă: 9:00 – 19:00<br>Duminică: 10:00 – 16:00</div>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      📍 Harta – Bd. Ștefan cel Mare 1, Chișinău
+    </div>
   </div>
-</section>
- 
-<!-- CATEGORIES -->
-<section class="section">
-  <div class="section-header">
-    <h2>Categorii populare</h2>
-    <p>Explorează produsele după categorie</p>
-  </div>
-  <div class="categories-grid">
-    <a href="#" class="category-card" onclick="filterCategory('Laptopuri'); return false;">
-      <div class="category-card-img">
-        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" alt="Laptopuri" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>💻</div>'">
+
+  <div class="contact-form-wrap">
+    <h2>Trimite-ne un mesaj</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Nume</label>
+        <input type="text" class="form-input" placeholder="Ion Popescu">
       </div>
-      <span>Laptopuri</span>
-    </a>
-    <a href="#" class="category-card" onclick="filterCategory('Telefoane'); return false;">
-      <div class="category-card-img">
-        <img src="https://images.unsplash.com/photo-1592899677977-9c10002761d0?w=400&q=80" alt="Telefoane" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>📱</div>'">
+      <div class="form-group">
+        <label class="form-label">Prenume</label>
+        <input type="text" class="form-input" placeholder="Maria">
       </div>
-      <span>Telefoane</span>
-    </a>
-    <a href="#" class="category-card" onclick="filterCategory('Tablete'); return false;">
-      <div class="category-card-img">
-        <img src="https://images.unsplash.com/photo-1589739900266-43b2843f4c12?w=400&q=80" alt="Tablete" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>📲</div>'">
-      </div>
-      <span>Tablete</span>
-    </a>
-    <a href="#" class="category-card" onclick="filterCategory('Accesorii'); return false;">
-      <div class="category-card-img">
-        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&q=80" alt="Accesorii" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>🎧</div>'">
-      </div>
-      <span>Accesorii</span>
-    </a>
-    <a href="#" class="category-card" onclick="filterCategory('Monitoare'); return false;">
-      <div class="category-card-img">
-        <img src="https://images.unsplash.com/photo-1547119957-637f8679db1e?w=400&q=80" alt="Monitoare" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>🖥️</div>'">
-      </div>
-      <span>Monitoare</span>
-    </a>
-    <a href="#" class="category-card" onclick="filterCategory('Wearables'); return false;">
-      <div class="category-card-img">
-        <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=400&q=80" alt="Wearables" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div class=\'product-icon-wrap\'>⌚</div>'">
-      </div>
-      <span>Wearables</span>
-    </a>
-  </div>
-</section>
- 
-<!-- BRANDS -->
-<div class="brands-section">
-  <div class="brands-label">Branduri de încredere</div>
-  <div class="brands-list">
-    <span>Apple</span>
-    <span>Samsung</span>
-    <span>Dell</span>
-    <span>HP</span>
-    <span>Lenovo</span>
-    <span>Asus</span>
-    <span>Sony</span>
-    <span>Logitech</span>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-input" placeholder="ion@email.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Telefon</label>
+      <input type="tel" class="form-input" placeholder="+373 XX XXX XXX">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Subiect</label>
+      <input type="text" class="form-input" placeholder="Întrebare despre un produs...">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Mesaj</label>
+      <textarea class="form-textarea" placeholder="Scrie mesajul tău aici..."></textarea>
+    </div>
+    <button class="form-submit" onclick="submitForm(this)">Trimite mesajul →</button>
   </div>
 </div>
- 
-<!-- OFERTE SPECIALE -->
-<section class="section" id="oferte">
-  <div class="offers-header">
-    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
-    <h2>Oferte speciale</h2>
-  </div>
-  <p class="offers-sub">Profită de reducerile noastre exclusive</p>
-  <div class="offers-grid">
-    <div class="offer-card">
-      <div class="offer-img">
-        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80" alt="Laptop gaming" loading="lazy"
-             onerror="this.parentElement.innerHTML+='<div class=\'product-icon-wrap\'>🎮</div>'; this.style.display='none'">
-        <span class="offer-badge badge-red">-30%</span>
-      </div>
-      <div class="offer-body">
-        <h3>Flash Sale - 24h</h3>
-        <p>Reduceri de până la 30% la laptopuri gaming</p>
-        <div class="offer-footer">
-          <span>⏱ <span id="timer">18:45:32</span></span>
-          <a href="#">Vezi oferta →</a>
-        </div>
-      </div>
-    </div>
-    <div class="offer-card">
-      <div class="offer-img">
-        <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=600&q=80" alt="iPhone" loading="lazy"
-             onerror="this.parentElement.innerHTML+='<div class=\'product-icon-wrap\'>📱</div>'; this.style.display='none'">
-        <span class="offer-badge badge-blue">-15%</span>
-      </div>
-      <div class="offer-body">
-        <h3>Deal al săptămânii</h3>
-        <p>iPhone 15 Pro la cel mai bun preț</p>
-        <div class="offer-footer">
-          <span>⏱ 4 zile</span>
-          <a href="#">Vezi oferta →</a>
-        </div>
-      </div>
-    </div>
-    <div class="offer-card">
-      <div class="offer-img">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80" alt="MacBook Bundle" loading="lazy"
-             onerror="this.parentElement.innerHTML+='<div class=\'product-icon-wrap\'>💻</div>'; this.style.display='none'">
-        <span class="offer-badge badge-green">SAVE</span>
-      </div>
-      <div class="offer-body">
-        <h3>Bundle Offer</h3>
-        <p>MacBook + AirPods – Economisești 2000 MDL</p>
-        <div class="offer-footer">
-          <span>⏱ 7 zile</span>
-          <a href="#">Vezi oferta →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- PRODUCTS -->
-<section class="products-section" id="products">
-  <div class="products-header">
-    <h2>Produse tehnice premium</h2>
-    <p>Descoperă cele mai noi produse la cele mai bune prețuri în Moldova</p>
-  </div>
-  <div class="products-layout">
-    <!-- FILTERS -->
-    <aside class="filters-panel">
-      <div class="filters-title">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-        Filtre
-      </div>
-      <div class="filters-group">
-        <div class="filters-group-label">Categorie</div>
-        <label class="filter-option"><input type="radio" name="cat" value="Toate" checked onchange="filterByRadio(this)"> Toate</label>
-        <label class="filter-option"><input type="radio" name="cat" value="Laptopuri" onchange="filterByRadio(this)"> Laptopuri</label>
-        <label class="filter-option"><input type="radio" name="cat" value="Telefoane" onchange="filterByRadio(this)"> Telefoane</label>
-        <label class="filter-option"><input type="radio" name="cat" value="Tablete" onchange="filterByRadio(this)"> Tablete</label>
-        <label class="filter-option"><input type="radio" name="cat" value="Monitoare" onchange="filterByRadio(this)"> Monitoare</label>
-        <label class="filter-option"><input type="radio" name="cat" value="Accesorii" onchange="filterByRadio(this)"> Accesorii</label>
-        <label class="filter-option"><input type="radio" name="cat" value="Wearables" onchange="filterByRadio(this)"> Wearables</label>
-      </div>
-      <div class="filters-group">
-        <div class="filters-group-label">Preț (MDL)</div>
-        <div class="price-inputs">
-          <input type="number" class="price-input" id="priceMin" value="0" min="0" onchange="filterProducts()">
-          <span class="price-sep">–</span>
-          <input type="number" class="price-input" id="priceMax" value="50000" max="50000" onchange="filterProducts()">
-        </div>
-      </div>
-      <button class="reset-btn" onclick="resetFilters()">Resetează filtrele</button>
-    </aside>
- 
-    <!-- GRID -->
-    <div>
-      <div class="products-count" id="productsCount">12 produse găsite</div>
-      <div class="products-grid" id="productsGrid"></div>
-    </div>
-  </div>
-</section>
- 
-<!-- REVIEWS -->
-<section class="reviews-section">
-  <div class="section-header">
-    <h2>Ce spun clienții noștri</h2>
-    <p>Peste 10,000 de clienți mulțumiți în toată Moldova</p>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-quote">"</div>
-      <p class="review-text">Serviciu excelent! Am comandat un MacBook și a ajuns în 24h. Produsul este original și prețul foarte competitiv. Recomand cu încredere!</p>
-      <div class="review-meta">
-        <div class="review-author">
-          <strong>Ana Popescu</strong>
-          <span>Chișinău</span>
-        </div>
-        <span class="review-date">15 Aprilie 2026</span>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-quote">"</div>
-      <p class="review-text">Prima dată când comand de la TechStore și sunt foarte mulțumit. Echipa a fost foarte profesionistă și m-au ajutat să aleg telefonul potrivit.</p>
-      <div class="review-meta">
-        <div class="review-author">
-          <strong>Mihai Rusu</strong>
-          <span>Bălți</span>
-        </div>
-        <span class="review-date">10 Aprilie 2026</span>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-quote">"</div>
-      <p class="review-text">Cel mai bun magazin tech din Moldova! Prețuri corecte, livrare rapidă și suport excelent. Am cumpărat și pentru prieteni.</p>
-      <div class="review-meta">
-        <div class="review-author">
-          <strong>Elena Ciobanu</strong>
-          <span>Cahul</span>
-        </div>
-        <span class="review-date">5 Aprilie 2026</span>
-      </div>
-    </div>
-  </div>
-  <div class="stats-row">
-    <div><div class="stat-num">4.9/5</div><div class="stat-label">Rating mediu</div></div>
-    <div><div class="stat-num">10K+</div><div class="stat-label">Clienți fericiți</div></div>
-    <div><div class="stat-num">500+</div><div class="stat-label">Produse</div></div>
-    <div><div class="stat-num">99%</div><div class="stat-label">Recomandări</div></div>
-  </div>
-</section>
- 
-<!-- FAQ -->
-<section style="padding: 64px 40px;">
-  <div style="max-width: 760px; margin: 0 auto;">
-    <div class="faq-header">
-      <div class="faq-icon">❓</div>
-      <h2 style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:8px;">Întrebări frecvente</h2>
-      <p style="color:var(--gray-600)">Răspunsuri la cele mai comune întrebări</p>
-    </div>
-    <div id="faqList">
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Care sunt opțiunile de livrare?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a">Livrăm în toată Moldova în 24h prin curier rapid. Livrarea este gratuită pentru comenzi peste 3000 MDL. Poți ridica produsul și direct din showroom-ul nostru din Chișinău.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Ce metode de plată acceptați?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a">Acceptăm plata cu card bancar (Visa/Mastercard), numerar la livrare, transfer bancar și plata în rate prin Moldova Agroindbank și Victoriabank.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Produsele au garanție?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a">Da! Toate produsele noastre sunt originale și beneficiază de garanție oficială de la producător – 12 sau 24 de luni, în funcție de produs. Oferim și garanție extinsă la cerere.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Pot returna un produs?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a">Da, acceptăm returnări în 14 zile de la livrare, dacă produsul este în stare originală și ambalajul este intact. Contactează-ne și ne ocupăm de tot procesul.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Produsele sunt originale?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a">100% da. Colaborăm direct cu distribuitori autorizați și importatori oficiali. Fiecare produs vine cu certificat de autenticitate și garanție oficială.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Cum pot urmări comanda mea?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a">După plasarea comenzii primești un SMS și email cu numărul de tracking. Poți urmări livrarea în timp real pe site-ul curierului. Echipa noastră te contactează înainte de livrare.</div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- FOOTER -->
+
 <footer>
   <div class="footer-grid">
     <div>
       <div class="footer-logo">TechStore MD</div>
-      <p class="footer-desc">Magazinul tău de încredere pentru tehnologie premium în Moldova. Garanție oficială, livrare rapidă, prețuri corecte.</p>
+      <p class="footer-desc">Magazinul tău de încredere pentru tehnologie premium în Moldova.</p>
     </div>
     <div class="footer-col">
       <h4>Navigare</h4>
       <ul>
-        <li><a href="#">Acasă</a></li>
-        <li><a href="#">Produse</a></li>
-        <li><a href="#">Oferte</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="produse.html">Produse</a></li>
+        <li><a href="oferte.html">Oferte</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Categorii</h4>
       <ul>
-        <li><a href="#">Laptopuri</a></li>
-        <li><a href="#">Telefoane</a></li>
-        <li><a href="#">Tablete</a></li>
-        <li><a href="#">Accesorii</a></li>
+        <li><a href="produse.html?cat=Laptopuri">Laptopuri</a></li>
+        <li><a href="produse.html?cat=Telefoane">Telefoane</a></li>
+        <li><a href="produse.html?cat=Tablete">Tablete</a></li>
+        <li><a href="produse.html?cat=Accesorii">Accesorii</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="#">📍 Chișinău, Moldova</a></li>
-        <li><a href="#">📞 +373 XX XXX XXX</a></li>
-        <li><a href="#">✉️ info@techstore.md</a></li>
+        <li><a href="contact.html">📍 Chișinău, Moldova</a></li>
+        <li><a href="contact.html">📞 +373 XX XXX XXX</a></li>
+        <li><a href="contact.html">✉️ info@techstore.md</a></li>
       </ul>
     </div>
   </div>
@@ -910,207 +141,26 @@
     <span>Politica de confidențialitate · Termeni și condiții</span>
   </div>
 </footer>
- 
-<!-- CHAT BTN -->
+
 <button class="chat-btn" title="Chat support">💬</button>
- 
-<!-- TOAST -->
-<div class="toast" id="toast">✓ Produs adăugat în coș!</div>
- 
+<div class="toast" id="toast">✓ Mesaj trimis cu succes!</div>
+
+<script src="js/main.js"></script>
 <script>
-  // ── PRODUCTS DATA cu emoji fallback pentru fiecare produs ──
-  const products = [
-    {
-      id: 1, cat: 'Laptopuri',
-      name: 'Laptop Dell XPS 15 – Intel Core i7, 16GB RAM, 512GB SSD',
-      price: 28999, rating: 4.8, reviews: 124,
-      img: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80',
-      emoji: '💻',
-      inStock: true
-    },
-    {
-      id: 2, cat: 'Telefoane',
-      name: 'iPhone 15 Pro Max 256GB – Titanium Natural',
-      price: 24500, rating: 4.9, reviews: 342,
-      img: 'https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&q=80',
-      emoji: '📱',
-      inStock: true
-    },
-    {
-      id: 3, cat: 'Telefoane',
-      name: 'Samsung Galaxy S24 Ultra 512GB',
-      price: 22300, rating: 4.7, reviews: 298,
-      img: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&q=80',
-      emoji: '📱',
-      inStock: true
-    },
-    {
-      id: 4, cat: 'Laptopuri',
-      name: 'MacBook Pro 14" M3 Pro – 18GB RAM, 1TB SSD',
-      price: 45999, rating: 5, reviews: 187,
-      img: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80',
-      emoji: '💻',
-      inStock: true
-    },
-    {
-      id: 5, cat: 'Accesorii',
-      name: 'Sony WH-1000XM5 – Căști wireless cu noise cancelling',
-      price: 7899, rating: 4.8, reviews: 456,
-      img: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&q=80',
-      emoji: '🎧',
-      inStock: true
-    },
-    {
-      id: 6, cat: 'Tablete',
-      name: 'iPad Pro 12.9" M2 – 256GB Wi-Fi',
-      price: 21999, rating: 4.9, reviews: 234,
-      img: 'https://images.unsplash.com/photo-1589739900266-43b2843f4c12?w=500&q=80',
-      emoji: '📲',
-      inStock: true
-    },
-    {
-      id: 7, cat: 'Accesorii',
-      name: 'Logitech MX Master 3S – Mouse wireless',
-      price: 1899, rating: 4.7, reviews: 678,
-      img: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&q=80',
-      emoji: '🖱️',
-      inStock: true
-    },
-    {
-      id: 8, cat: 'Monitoare',
-      name: 'Samsung 27" Monitor 4K UHD – 144Hz',
-      price: 8499, rating: 4.6, reviews: 189,
-      img: 'https://images.unsplash.com/photo-1547119957-637f8679db1e?w=500&q=80',
-      emoji: '🖥️',
-      inStock: true
-    },
-    {
-      id: 9, cat: 'Wearables',
-      name: 'Apple Watch Series 9 – GPS + Cellular 45mm',
-      price: 9899, rating: 4.8, reviews: 523,
-      img: 'https://images.unsplash.com/photo-1544117519-31a4b719223d?w=500&q=80',
-      emoji: '⌚',
-      inStock: false
-    },
-    {
-      id: 10, cat: 'Accesorii',
-      name: 'Keychron K8 Pro – Tastatură mecanică wireless',
-      price: 2199, rating: 4.7, reviews: 312,
-      img: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=500&q=80',
-      emoji: '⌨️',
-      inStock: true
-    },
-    {
-      id: 11, cat: 'Accesorii',
-      name: 'AirPods Pro (2nd generation) cu USB-C',
-      price: 5499, rating: 4.9, reviews: 892,
-      img: 'https://images.unsplash.com/photo-1606741965509-717c3f54e4c5?w=500&q=80',
-      emoji: '🎧',
-      inStock: true
-    },
-    {
-      id: 12, cat: 'Laptopuri',
-      name: 'Asus ROG Strix Gaming Laptop – RTX 4070, 32GB RAM',
-      price: 35999, rating: 4.7, reviews: 156,
-      img: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=80',
-      emoji: '🎮',
-      inStock: true
-    },
-  ];
- 
-  let cartCount = 0;
-  let activeCategory = 'Toate';
- 
-  function renderProducts(list) {
-    const grid = document.getElementById('productsGrid');
-    document.getElementById('productsCount').textContent = list.length + ' produse găsite';
-    grid.innerHTML = list.map(p => `
-      <div class="product-card">
-        <div class="product-img">
-          <img src="${p.img}" alt="${p.name}" loading="lazy"
-               onerror="this.style.display='none'; this.nextElementSibling && (this.nextElementSibling.style.display='flex'); if(!this.nextSibling || !this.nextSibling.classList || !this.nextSibling.classList.contains('img-placeholder')) { let d=document.createElement('div'); d.className='product-icon-wrap'; d.textContent='${p.emoji}'; this.parentElement.insertBefore(d, this.nextSibling); }">
-          ${!p.inStock ? `<div class="out-of-stock-overlay"><span>Stoc epuizat</span></div>` : ''}
-        </div>
-        <div class="product-body">
-          <div class="product-cat">${p.cat}</div>
-          <div class="product-name">${p.name}</div>
-          <div class="product-rating">
-            <span class="stars">${'★'.repeat(Math.floor(p.rating))}${'☆'.repeat(5-Math.floor(p.rating))}</span>
-            ${p.rating} (${p.reviews})
-          </div>
-          <div class="product-footer">
-            <div class="product-price">${p.price.toLocaleString('ro')} MDL</div>
-            <button class="btn-add" ${!p.inStock ? 'disabled' : ''} onclick="addToCart(${p.id})">
-              🛒 Adaugă
-            </button>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  }
- 
-  function filterProducts() {
-    const min = parseInt(document.getElementById('priceMin').value) || 0;
-    const max = parseInt(document.getElementById('priceMax').value) || 999999;
-    let filtered = products.filter(p => p.price >= min && p.price <= max);
-    if (activeCategory !== 'Toate') filtered = filtered.filter(p => p.cat === activeCategory);
-    renderProducts(filtered);
-  }
- 
-  function filterByRadio(el) {
-    activeCategory = el.value;
-    filterProducts();
-  }
- 
-  function filterCategory(cat) {
-    activeCategory = cat;
-    document.querySelectorAll('input[name="cat"]').forEach(r => { r.checked = r.value === cat; });
-    filterProducts();
-    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-  }
- 
-  function resetFilters() {
-    activeCategory = 'Toate';
-    document.getElementById('priceMin').value = 0;
-    document.getElementById('priceMax').value = 50000;
-    document.querySelectorAll('input[name="cat"]').forEach(r => { r.checked = r.value === 'Toate'; });
-    filterProducts();
-  }
- 
-  function addToCart(id) {
-    cartCount++;
-    document.getElementById('cartBadge').textContent = cartCount;
-    showToast();
-  }
- 
-  function openCart() {
-    alert(`Ai ${cartCount} produs(e) în coș.`);
-  }
- 
-  function showToast() {
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2000);
-  }
- 
-  function toggleFaq(el) {
-    const item = el.parentElement;
-    item.classList.toggle('open');
-  }
- 
-  // Timer countdown
-  let seconds = 18*3600 + 45*60 + 32;
-  setInterval(() => {
-    if (seconds > 0) seconds--;
-    const h = String(Math.floor(seconds/3600)).padStart(2,'0');
-    const m = String(Math.floor((seconds%3600)/60)).padStart(2,'0');
-    const s = String(seconds%60).padStart(2,'0');
-    const el = document.getElementById('timer');
-    if (el) el.textContent = `${h}:${m}:${s}`;
-  }, 1000);
- 
-  // Init
-  renderProducts(products);
+function submitForm(btn) {
+  const t = document.getElementById('toast');
+  t.textContent = '✓ Mesaj trimis cu succes!';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+  btn.textContent = 'Mesaj trimis ✓';
+  btn.disabled = true;
+  btn.style.background = '#22c55e';
+  setTimeout(() => {
+    btn.textContent = 'Trimite mesajul →';
+    btn.disabled = false;
+    btn.style.background = '';
+  }, 3000);
+}
 </script>
 </body>
 </html>
